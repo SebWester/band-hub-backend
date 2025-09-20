@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes here
+import loginRouter from "./routes/loginRoute.js";
+
+app.use("/api/login", loginRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT} 🚀`);
